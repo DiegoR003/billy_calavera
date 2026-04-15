@@ -6,31 +6,34 @@
     <title>Press Kit Oficial | Billy Calavera</title>
     
     <link rel="icon" href="./assets/iconos/billy-calavera-light.webp"/>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/main.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
 </head>
-<body class="antialiased">
+<body class="antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-banda-dark/95 backdrop-blur-md border-b border-gray-800">
+    <nav class="fixed w-full z-50 bg-banda-dark/95 backdrop-blur-md border-b border-gray-800" data-aos="fade-down">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap items-center justify-center md:justify-between h-auto md:h-20 py-4 md:py-0 gap-4 md:gap-0">
                 <div class="flex-shrink-0 flex items-center gap-4">
-                    <img src="assets/iconos/billy-calavera-light.webp" alt="Logo Banda" class="h-16 w-20 md:h-16 w-auto">
+                    <img src="assets/iconos/billy-calavera-light.webp" alt="Logo Banda" class="h-16 md:h-20 w-auto">
                 </div>
                 <div class="w-full md:w-auto">
                     <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 font-medium text-sm md:text-base">
                         <a href="#bio" class="text-banda-light hover:text-banda-primary transition-colors">Biografía</a>
-                        <a href="#musica" class="text-banda-light hover:text-banda-primary transition-colors">Música</a>
+                        <a href="#musica" class="text-banda-light hover:text-banda-primary transition-colors">Música/Videos</a>
                         <a href="#galeria" class="text-banda-light hover:text-banda-primary transition-colors">Fotos</a>
+                        <a href="#rider" class="text-banda-light hover:text-banda-primary transition-colors">Rider</a>
                         <a href="#contacto" class="text-banda-light hover:text-banda-primary transition-colors">Contacto</a>
                     </div>
                 </div>
@@ -38,45 +41,91 @@
         </div>
     </nav>
 
-    <header class="relative h-screen flex items-center bg-[url('assets/img/hero.jpg')] bg-cover bg-center bg-no-repeat">
-        <div class="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/90 md:via-black/60 md:to-transparent"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-3xl text-center md:text-left wow animate__animated animate__fadeInUp">
-                <h1 class="text-6xl md:text-8xl font-bold uppercase mb-4 leading-tight">
-                    Billy <br><span class="text-banda-primary">Calavera</span>
-                </h1>
-                <p class="text-lg md:text-2xl font-light text-banda-light mb-10 mx-auto md:mx-0 max-w-xl md:max-w-none">
-                    "Rock alternativo con raíces en Los Cabos, evolucionando y redefiniendo sus propios límites en cada ciclo."
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start items-center gap-6">
-                    <a href="#musica" class="bg-banda-primary hover:bg-banda-secondary text-banda-dark hover:text-white font-bold py-4 px-8 rounded-full transition-all uppercase tracking-wider text-sm">
-                        Escuchar Último Material
-                    </a>
+    <header class="relative h-screen w-full">
+        <div class="swiper myHeroSwiper h-full w-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative flex items-center bg-[url('assets/img/banda/banda1.webp')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-black/20 md:bg-gradient-to-r md:from-black/90 md:via-black/60 md:to-transparent"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left" data-aos="fade-right">
+                        <h1 class="text-6xl md:text-8xl font-bold uppercase mb-4 leading-tight text-white font-display">
+                            Billy <br><span class="text-banda-primary">Calavera</span>
+                        </h1>
+                        <p class="text-lg md:text-2xl font-light text-banda-light mb-10 mx-auto md:mx-0 max-w-xl md:max-w-none">
+                            "Rock alternativo con raíces en Los Cabos, evolucionando y redefiniendo sus propios límites en cada ciclo."
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide relative flex items-center bg-[url('assets/img/hero2.webp')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/90 md:via-black/60 md:to-transparent"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left">
+                        <h2 class="text-5xl md:text-7xl font-bold uppercase mb-4 text-white font-display">Escucha <span class="text-banda-primary">Ciclos</span></h2>
+                    </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next !text-banda-primary"></div>
+            <div class="swiper-button-prev !text-banda-primary"></div>
         </div>
     </header>
 
-    <section id="bio" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-        <div class="wow animate__animated animate__fadeInLeft">
+   <div class="bg-banda-dark border-b border-gray-800 py-6 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 flex justify-center flex-wrap gap-8 md:gap-10 text-banda-light">
+            
+            <a href="https://open.spotify.com/artist/4IFMH9wTQYnYGmQbprvA5y?si=6k9dglPFSA-5ofcsB2kBVA" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.24 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            </a>
+            
+            <a href="https://music.apple.com/us/artist/billy-calavera/1421446288" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.153 14.073c-.006-2.502 2.05-3.708 2.146-3.766-1.164-1.701-2.981-1.934-3.627-1.956-1.55-.157-3.025.914-3.816.914-.79 0-1.996-.897-3.271-.871-1.656.024-3.181.962-4.032 2.443-1.722 2.983-.44 7.4 1.239 9.832.822 1.185 1.79 2.518 3.064 2.469 1.222-.05 1.691-.792 3.17-.792 1.478 0 1.91.792 3.195.767 1.31-.024 2.138-1.206 2.956-2.39.948-1.385 1.338-2.727 1.358-2.796-.03-.012-2.613-1.004-2.622-4.004h.24zM14.939 5.892c.677-.82 1.134-1.957 1.01-3.092-1.006.04-2.203.668-2.9 1.488-.553.642-1.1 1.793-.952 2.91 1.122.087 2.164-.486 2.842-1.306z"/></svg>
+            </a>
+
+            <a href="https://youtube.com/@billycalavera8454?si=59dsy4lQxjPy1FlO" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+
+            <a href="https://www.instagram.com/billy._.calavera?igsh=eTNkcDhlM25oYm9y" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"/></svg>
+            </a>
+
+            <a href="https://www.facebook.com/share/18kdDZ4N6H/" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+
+            <a href="https://app.chartmetric.com/es/artist/4297896" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center" title="Chartmetric">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            </a>
+
+            <a href="#" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+
+            <a href="#" target="_blank" class="hover:text-banda-primary hover:-translate-y-1 transition-all flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/></svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <section id="bio" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-start overflow-hidden">
+        <div data-aos="fade-right">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 font-display uppercase">Nuestra <span class="text-banda-primary">Historia</span></h2>
             
             <div class="text-banda-light space-y-5 text-base md:text-lg leading-relaxed">
-                <p>
-                    Billy Calavera nació en Los Cabos bajo la visión de sus fundadores: Rob y Moy. Desde 2014, la dupla comenzó a dejar huella en escenarios clave como la Fiesta de la Música, consolidando un sonido que evolucionó desde un demo de diez temas en 2015 hasta su primer material oficial, "Luces en la Radio" (2018).
-                </p>
+                <p>Billy Calavera nació en Los Cabos bajo la visión de sus fundadores: Rob y Moy. Desde 2014, la dupla comenzó a dejar huella en escenarios clave como la Fiesta de la Música, consolidando un sonido que evolucionó desde un demo de diez temas en 2015 hasta su primer material oficial, "Luces en la Radio" (2018).</p>
                 
                 <div id="bio-extendida" class="hidden space-y-5">
-                    <p>
-                        La banda no se detuvo y, a partir de 2023, se volcó en la liberación de "III", su segundo material discográfico oficial. Este disco representó un periodo de transición y madurez, reafirmando su presencia en la escena y preparando el terreno para lo que vendría después.
-                    </p>
-                    <p>
-                        Con la reciente incorporación de Richy y Mike, Billy Calavera ha inyectado una nueva dimensión creativa a su estructura. El resultado más reciente de esta evolución es "Ciclos", un EP conceptual que explora la dualidad entre la bienvenida y la despedida de la vida terrenal. En este material, la banda demuestra su versatilidad rompiendo moldes: desde la cadencia de un huapango en 3/4 en "Sheer Love" hasta la sofisticación del British Rock en "10 Años".
-                    </p>
-                    <p>
-                        Actualmente, la banda se mantiene en un estado de creación constante, puliendo en cada ensayo las ideas que darán forma a su próximo material. Con la alineación más sólida de su historia, Billy Calavera continúa redefiniendo los límites de su propio rock.
-                    </p>
+                    <p>La banda no se detuvo y, a partir de 2023, se volcó en la liberación de "III", su segundo material discográfico oficial. Este disco representó un periodo de transición y madurez, reafirmando su presencia en la escena y preparando el terreno para lo que vendría después.</p>
+                    <p>Con la reciente incorporación de Richy y Mike, Billy Calavera ha inyectado una nueva dimensión creativa a su estructura. El resultado más reciente de esta evolución es "Ciclos", un EP conceptual que explora la dualidad entre la bienvenida y la despedida de la vida terrenal.</p>
+                    
+                    <div class="mt-8 p-6 bg-gray-900 rounded-lg border border-gray-800">
+                        <h3 class="text-xl font-bold text-banda-primary font-display uppercase mb-4">Integrantes:</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><span class="font-bold text-white">Moisés Rojas</span> - Batería</li>
+                            <li><span class="font-bold text-white">Roberto Díaz</span> - Guitarra y voz</li>
+                            <li><span class="font-bold text-white">Miguel Urías</span> - Bajo y coros</li>
+                            <li><span class="font-bold text-white">Ricardo Martínez</span> - Guitarra y coros</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -85,7 +134,7 @@
             </button>
         </div>
 
-        <div class="bg-gray-900/50 p-10 rounded-2xl border border-gray-800 relative wow animate__animated animate__fadeInRight">
+      <div class="bg-gray-900/50 p-10 rounded-2xl border border-gray-800 relative wow animate__animated animate__fadeInRight">
             <span class="absolute -top-6 -left-2 text-8xl text-banda-primary opacity-30 font-display">"</span>
             <blockquote class="relative z-10 text-2xl md:text-3xl font-light italic text-white mb-6 leading-tight">
                 Una de las propuestas más refrescantes y enérgicas que han pisado el escenario este año. Pura electricidad de principio a fin.
@@ -96,64 +145,194 @@
         </div>
     </section>
 
-    <section id="musica" class="py-16 md:py-24 bg-gray-900 border-y border-gray-800 wow animate__animated animate__fadeInUp">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase">Último <span class="text-banda-primary">Lanzamiento</span></h2>
+    <section id="musica" class="py-16 md:py-24 bg-gray-900 border-y border-gray-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase text-center" data-aos="fade-up">Audio & <span class="text-banda-primary">Video</span></h2>
             
-            <div class="shadow-2xl rounded-xl overflow-hidden bg-black">
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5Gjf8VHlAsi4sVzwXzE3XZ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-up" class="shadow-2xl rounded-xl overflow-hidden bg-black border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-banda-primary p-4 pb-0 font-display">Último Lanzamiento</h3>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5Gjf8VHlAsi4sVzwXzE3XZ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" loading="lazy" class="p-4"></iframe>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200" class="shadow-2xl rounded-xl overflow-hidden bg-black border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-banda-primary p-4 pb-0 font-display">Presentación en Vivo</h3>
+                    <div class="aspect-w-16 aspect-h-9 p-4">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/TU_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px;"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="galeria" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase">Galería <span class="text-banda-primary">& Assets</span></h2>
+    <section id="galeria" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase" data-aos="fade-up">Galería <span class="text-banda-primary">& Assets</span></h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:grid-rows-3 gap-4 mb-16 md:h-[800px]">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-            <div class="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 hover:opacity-80 transition-opacity wow animate__animated animate__zoomIn">Foto 1 (Reemplazar)</div>
-            <div class="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 hover:opacity-80 transition-opacity wow animate__animated animate__zoomIn" data-wow-delay="0.2s">Foto 2 (Reemplazar)</div>
-            <div class="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 hover:opacity-80 transition-opacity wow animate__animated animate__zoomIn" data-wow-delay="0.4s">Foto 3 (Reemplazar)</div>
-        </div>
+        <!-- Foto grande: ocupa 2 cols x 2 rows -->
+        <a href="assets/img/banda/banda8.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="0"
+           class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda8.webp" alt="Billy Calavera Foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary font-bold tracking-widest uppercase border-2 border-banda-primary py-2 px-6 rounded">Ampliar</span>
+            </div>
+        </a>
 
-        <div class="bg-gradient-to-br from-gray-900 to-black p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl wow animate__animated animate__fadeInLeft">
+        <!-- Foto 2: col 3, row 1 -->
+        <a href="assets/img/banda/banda2.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="100"
+           class="group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda2.webp" alt="Billy Calavera Foto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary text-sm font-bold tracking-widest uppercase border border-banda-primary py-1 px-4 rounded">Ampliar</span>
+            </div>
+        </a>
+
+        <!-- Foto 3: col 4, row 1 -->
+        <a href="assets/img/banda/banda3.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="200"
+           class="group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda3.webp" alt="Billy Calavera Foto 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary text-sm font-bold tracking-widest uppercase border border-banda-primary py-1 px-4 rounded">Ampliar</span>
+            </div>
+        </a>
+
+        <!-- Foto 4: col 3, row 2 -->
+        <a href="assets/img/banda/banda7.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="300"
+           class="group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda7.webp" alt="Billy Calavera Foto 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary text-sm font-bold tracking-widest uppercase border border-banda-primary py-1 px-4 rounded">Ampliar</span>
+            </div>
+        </a>
+
+        <!-- Foto 5: col 4, row 2 -->
+        <a href="assets/img/banda/banda9.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="400"
+           class="group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda9.webp" alt="Billy Calavera Foto 5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary text-sm font-bold tracking-widest uppercase border border-banda-primary py-1 px-4 rounded">Ampliar</span>
+            </div>
+        </a>
+
+        <!-- Foto panorámica 6: cols 1-2, row 3 -->
+        <a href="assets/img/banda/banda11.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="500"
+           class="md:col-span-2 group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda11.webp" alt="Billy Calavera Foto 6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary font-bold tracking-widest uppercase border-2 border-banda-primary py-2 px-6 rounded">Ampliar</span>
+            </div>
+        </a>
+
+        <!-- Foto panorámica 7: cols 3-4, row 3 -->
+        <a href="assets/img/banda/banda4.webp" data-fancybox="gallery" data-aos="zoom-in" data-aos-delay="600"
+           class="md:col-span-2 group relative overflow-hidden rounded-xl bg-gray-800">
+            <img src="assets/img/banda/banda4.webp" alt="Billy Calavera Foto 7" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                <span class="text-banda-primary font-bold tracking-widest uppercase border-2 border-banda-primary py-2 px-6 rounded">Ampliar</span>
+            </div>
+        </a>
+
+    </div>
+
+   <div class="hidden bg-gradient-to-br from-gray-900 to-black p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl" data-aos="fade-up">
             <h3 class="text-2xl md:text-3xl font-bold mb-4 text-banda-light">Descarga el Electronic Press Kit</h3>
             <p class="text-banda-light/80 mb-8 max-w-2xl mx-auto text-sm md:text-base">
-                Accede a nuestra carpeta con fotografías en alta resolución (300 dpi CMYK), logotipos vectorizados y nuestro Tech Rider en PDF.
+                Accede a nuestra carpeta con fotografías en alta resolución, logotipos vectorizados y nuestro Tech Rider en formato PDF.
             </p>
             <a href="#" target="_blank" class="inline-block bg-banda-light text-banda-dark hover:bg-white font-bold text-base md:text-lg py-4 md:py-5 px-8 md:px-10 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all hover:scale-105 uppercase tracking-wide">
                 📁 Acceder al Media Kit
             </a>
         </div>
+
+</section>
+
+    
+
+    <section id="rider" class="py-16 md:py-24 bg-gray-900 border-y border-gray-800 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 font-display uppercase">Rider <span class="text-banda-primary">Genérico</span></h2>
+            <p class="mb-8 text-banda-light">Requerimientos técnicos básicos para presentaciones en vivo:</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-3xl mx-auto bg-black p-8 rounded-2xl border border-gray-800">
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 1 Batería</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 1 Línea para drumpad</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 2 Líneas para pistas</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 2 Líneas para teclado</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 2 Amp guitarra</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 1 Amp bajo</div>
+                <div class="flex items-center gap-3"><span class="text-banda-primary text-2xl">•</span> 3 Voces</div>
+            </div>
+        </div>
     </section>
 
-    <section id="contacto" class="py-16 md:py-24 bg-banda-primary text-white wow animate__animated animate__fadeInRight">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase text-white">Booking & <span class="text-black">Management</span></h2>
-            
-            <div class="bg-black/20 p-6 md:p-10 rounded-2xl backdrop-blur-sm">
-                <p class="text-2xl md:text-3xl font-bold mb-2 font-display">Roberto Díaz</p>
-                <p class="text-white/80 text-base md:text-lg mb-8">Los Cabos, B.C.S.</p>
-                
-                <div class="flex flex-col items-center gap-6">
-                    <a href="mailto:managementhshloscabos@gmail.com" class="text-lg md:text-2xl hover:text-black transition-colors flex items-center justify-center gap-3 font-medium break-all w-full px-2">
-                        <svg class="w-6 h-6  flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <span>managementhshloscabos@gmail.com</span>
+    <section id="contacto" class="py-24 bg-banda-primary text-banda-dark overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 font-display uppercase text-banda-dark">Booking & <span class="text-white">Management</span></h2>
+            <div class="bg-black/10 p-10 rounded-2xl backdrop-blur-sm">
+                <p class="text-3xl font-bold mb-2 font-display">Roberto Díaz</p>
+                <p class="text-banda-dark/80 text-lg mb-8">Los Cabos, B.C.S.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <a href="mailto:managementhshloscabos@gmail.com" class="text-xl md:text-2xl hover:text-white transition-colors flex items-center gap-3 font-medium break-all px-2">
+                        <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        managementhshloscabos@gmail.com
                     </a>
-                    
-                    <a href="tel:+526241082605" class="text-xl md:text-2xl hover:text-black transition-colors flex items-center justify-center gap-3 font-medium w-full">
+                    <span class="hidden md:block text-banda-dark/30 text-3xl">|</span>
+                    <a href="tel:+526241082605" class="text-2xl hover:text-white transition-colors flex items-center gap-3 font-medium">
                         <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <span>+52 624 108 2605</span>
+                        +52 624 108 2605
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+    <footer class="bg-black py-8 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <img src="assets/iconos/billy-calavera-light.webp" alt="Billy Calavera" class="h-10 mx-auto mb-4 opacity-50">
+            <p class="text-banda-light/40 text-sm tracking-widest uppercase font-body">
+                Sitio web desarrollado por <span class="text-banda-primary font-bold">Diego Nava</span> — San José del Cabo, B.C.S.
+            </p>
+        </div>
+    </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Inicializar animaciones de AOS (Repitiéndose al subir y bajar)
+        AOS.init({
+            once: false, 
+            mirror: true, 
+            offset: 100, 
+            duration: 800
+        });
+
+        // Inicializar Lightbox para la Galería
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            hideScrollbar: false,
+        });
+
+        // Inicializar el Carrusel (Swiper)
+        var swiper = new Swiper(".myHeroSwiper", {
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    
     <script src="js/app.js"></script>
 </body>
 </html>
