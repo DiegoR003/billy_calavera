@@ -1,5 +1,23 @@
 {
   "devDependencies": {
     "tailwindcss": "^4.2.2"
-  }
+  },
+  "name": "billy_calavera",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoR003/billy_calavera.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoR003/billy_calavera/issues"
+  },
+  "homepage": "https://github.com/DiegoR003/billy_calavera#readme",
+  "description": ""
 }
