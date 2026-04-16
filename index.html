@@ -395,38 +395,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
-    <script>
-        // Inicializar animaciones de AOS (Repitiéndose al subir y bajar)
-        AOS.init({
-            once: false, 
-            mirror: true, 
-            offset: 100, 
-            duration: 800
-        });
-
-        // Inicializar Lightbox para la Galería
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            hideScrollbar: false,
-        });
-
-        // Inicializar el Carrusel (Swiper)
-        var swiper = new Swiper(".myHeroSwiper", {
-            loop: true,
-            effect: "fade",
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+    
     
     <script src="js/app.js"></script>
 </body>
