@@ -19,5 +19,8 @@
     "url": "https://github.com/DiegoR003/billy_calavera/issues"
   },
   "homepage": "https://github.com/DiegoR003/billy_calavera#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.41.0"
+  }
 }
